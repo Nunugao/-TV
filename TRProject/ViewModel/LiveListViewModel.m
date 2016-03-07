@@ -8,21 +8,16 @@
 
 #import "LiveListViewModel.h"
 
+@interface LiveListModel()
+
+@end
+
 @implementation LiveListViewModel
 
 
 -(NSInteger)rowNumber{
     return self.liveList.count;
 }
-//- (LiveListDataModel *) modelForRow:(NSInteger) row;
-//
-//- (NSURL *) thumbForRow:(NSInteger) row;
-//- (NSString *) titleForRow:(NSInteger) row;
-//
-//- (NSString *)nickForRow:(NSInteger) row;
-//- (NSString *)viewForRow:(NSInteger) row;
-//
-//- (NSString *)uidForRow:(NSInteger) row;
 
 - (LiveListDataModel *)modelForRow:(NSInteger)row{
     return  self.liveList[row];

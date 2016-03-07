@@ -22,12 +22,8 @@
 
 - (NSURL *) thumbForRow:(NSInteger) row;
 - (NSString *) titleForRow:(NSInteger) row;
-
-- (NSString *)nickForRow:(NSInteger) row;
-- (NSString *)viewForRow:(NSInteger) row;
-
-- (NSString *)uidForRow:(NSInteger) row;
-
-- (void)getDataWithRequestMode:(RequestMode)requestMode completionHanle:(void (^)(NSError *))completionHandle;
+- (NSString *) nickForRow:(NSInteger) row;
+- (NSString *) viewForRow:(NSInteger) row;
+- (NSString *) uidForRow:(NSInteger) row;
 
 @end

@@ -11,7 +11,6 @@
 #import "TVNetManager.h"
 #import "ViewController.h"
 #import "LiveListNetManager.h"
-#import "LiveListViewController.h"
 #import "PlayViewController.h"
 #import "DetailGameListNetManager.h"
 
@@ -23,9 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     
-    [DetailGameListNetManager getDetailGameListWithSlug:@"lol" completionHandler:^(id model, NSError *error) {
-        NSLog(@"adfasdfasdfadfs");
-    }];
     [self setupGlobalConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

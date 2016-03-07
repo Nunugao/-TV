@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColumModel.h"
 
 @interface DetailGameListViewController : UIViewController
-@property (nonatomic) NSString *slug;
+//@property (nonatomic) NSString *slug;
 
+@property (nonatomic) ColumModel *columModel;
+
+@property (nonatomic) UINavigationController *navi;
 @end

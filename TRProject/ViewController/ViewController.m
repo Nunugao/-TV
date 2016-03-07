@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ColumCollectionViewCell.h"
 #import "ColumViewModel.h"
+#import "DetailGameListViewController.h"
 
 @interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -39,8 +40,10 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    NSString *slug = [self.viewModel columSlugForRow:indexPath.row];
-
+    ColumModel *model = self.viewModel.columList[indexPath.row];
+    DetailGameListViewController *vc = [DetailGameListViewController new];
+    vc.columModel = model;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDataSource Delegate
