@@ -31,6 +31,12 @@
 		8527EE2D1C8D244B00D21E8D /* ColumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE2C1C8D244B00D21E8D /* ColumModel.m */; };
 		8527EE301C8D254500D21E8D /* ColumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE2F1C8D254500D21E8D /* ColumViewModel.m */; };
 		8527EE331C8D2BE500D21E8D /* ColumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */; };
+		8527EE361C8D453E00D21E8D /* LiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE351C8D453E00D21E8D /* LiveCollectionViewCell.m */; };
+		8527EE391C8D4C7300D21E8D /* LiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE381C8D4C7300D21E8D /* LiveListViewController.m */; };
+		8527EE3C1C8D4D1A00D21E8D /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE3B1C8D4D1A00D21E8D /* LiveListModel.m */; };
+		8527EE3F1C8D52F300D21E8D /* LiveListNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE3E1C8D52F300D21E8D /* LiveListNetManager.m */; };
+		8527EE421C8D53F000D21E8D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE411C8D53F000D21E8D /* PlayViewController.m */; };
+		8527EE451C8D545600D21E8D /* LiveListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE441C8D545600D21E8D /* LiveListViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +88,18 @@
 		8527EE2F1C8D254500D21E8D /* ColumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumViewModel.m; sourceTree = "<group>"; };
 		8527EE311C8D2BE500D21E8D /* ColumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumCollectionViewCell.h; sourceTree = "<group>"; };
 		8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumCollectionViewCell.m; sourceTree = "<group>"; };
+		8527EE341C8D453E00D21E8D /* LiveCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCollectionViewCell.h; sourceTree = "<group>"; };
+		8527EE351C8D453E00D21E8D /* LiveCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCollectionViewCell.m; sourceTree = "<group>"; };
+		8527EE371C8D4C7300D21E8D /* LiveListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListViewController.h; sourceTree = "<group>"; };
+		8527EE381C8D4C7300D21E8D /* LiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewController.m; sourceTree = "<group>"; };
+		8527EE3A1C8D4D1A00D21E8D /* LiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
+		8527EE3B1C8D4D1A00D21E8D /* LiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
+		8527EE3D1C8D52F300D21E8D /* LiveListNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListNetManager.h; sourceTree = "<group>"; };
+		8527EE3E1C8D52F300D21E8D /* LiveListNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListNetManager.m; sourceTree = "<group>"; };
+		8527EE401C8D53F000D21E8D /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		8527EE411C8D53F000D21E8D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		8527EE431C8D545600D21E8D /* LiveListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListViewModel.h; sourceTree = "<group>"; };
+		8527EE441C8D545600D21E8D /* LiveListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewModel.m; sourceTree = "<group>"; };
 		8759E2D9A62BE10618FCC99C /* libPods-TRProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +153,8 @@
 				8527EE251C8D127E00D21E8D /* PlayModel.m */,
 				8527EE2B1C8D244B00D21E8D /* ColumModel.h */,
 				8527EE2C1C8D244B00D21E8D /* ColumModel.m */,
+				8527EE3A1C8D4D1A00D21E8D /* LiveListModel.h */,
+				8527EE3B1C8D4D1A00D21E8D /* LiveListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +164,8 @@
 			children = (
 				8527EE271C8D15B200D21E8D /* TVNetManager.h */,
 				8527EE281C8D15B200D21E8D /* TVNetManager.m */,
+				8527EE3D1C8D52F300D21E8D /* LiveListNetManager.h */,
+				8527EE3E1C8D52F300D21E8D /* LiveListNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -180,6 +202,8 @@
 			children = (
 				8527EE311C8D2BE500D21E8D /* ColumCollectionViewCell.h */,
 				8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */,
+				8527EE341C8D453E00D21E8D /* LiveCollectionViewCell.h */,
+				8527EE351C8D453E00D21E8D /* LiveCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +213,10 @@
 			children = (
 				38A1A3341C74526C007EEEB7 /* ViewController.h */,
 				38A1A3351C74526C007EEEB7 /* ViewController.m */,
+				8527EE371C8D4C7300D21E8D /* LiveListViewController.h */,
+				8527EE381C8D4C7300D21E8D /* LiveListViewController.m */,
+				8527EE401C8D53F000D21E8D /* PlayViewController.h */,
+				8527EE411C8D53F000D21E8D /* PlayViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -198,6 +226,8 @@
 			children = (
 				8527EE2E1C8D254500D21E8D /* ColumViewModel.h */,
 				8527EE2F1C8D254500D21E8D /* ColumViewModel.m */,
+				8527EE431C8D545600D21E8D /* LiveListViewModel.h */,
+				8527EE441C8D545600D21E8D /* LiveListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -397,13 +427,18 @@
 				38A1A3471C745317007EEEB7 /* NSObject+MJExtension.m in Sources */,
 				8527EE301C8D254500D21E8D /* ColumViewModel.m in Sources */,
 				38A1A3551C745698007EEEB7 /* iCarousel.m in Sources */,
+				8527EE391C8D4C7300D21E8D /* LiveListViewController.m in Sources */,
+				8527EE421C8D53F000D21E8D /* PlayViewController.m in Sources */,
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				38A1A3511C74560D007EEEB7 /* PSCollectionViewCell.m in Sources */,
 				8527EE291C8D15B200D21E8D /* TVNetManager.m in Sources */,
 				38A1A33B1C7452CF007EEEB7 /* Factory.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
+				8527EE3F1C8D52F300D21E8D /* LiveListNetManager.m in Sources */,
 				382C11861C7E930F00F34BB0 /* NSObject+ViewModel.m in Sources */,
+				8527EE451C8D545600D21E8D /* LiveListViewModel.m in Sources */,
+				8527EE3C1C8D4D1A00D21E8D /* LiveListModel.m in Sources */,
 				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				38A0898E1C869C3000CA6019 /* BaseModel.m in Sources */,
@@ -412,6 +447,7 @@
 				8527EE261C8D127E00D21E8D /* PlayModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
 				8527EE2D1C8D244B00D21E8D /* ColumModel.m in Sources */,
+				8527EE361C8D453E00D21E8D /* LiveCollectionViewCell.m in Sources */,
 				38A1A3501C74560D007EEEB7 /* PSCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

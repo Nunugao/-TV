@@ -13,6 +13,8 @@
 + (id)parse:(id)responseObj;
 + (NSDictionary *)objClassInArray;
 + (NSDictionary *)replaceKeyFromPropertyName;
+
++ (NSString *)replacedKeyFromPropertyName:(NSString *) propertyName;
 @end
 
 

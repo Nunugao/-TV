@@ -20,6 +20,15 @@
 @end
 
 @implementation ViewController
+
+#pragma mark - UICollectionViewDataSource
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+ 
+
+}
+
 #pragma mark - UICollectionViewDataSource Delegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -57,7 +66,6 @@
         [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
         }];
-//        WK(weakSelf);
         WK(weakSelf);
         [_collectionView addHeaderRefresh:^{
             [weakSelf.viewModel getDataWithRequestMode:RequestModeRefresh completionHanle:^(NSError *error) {

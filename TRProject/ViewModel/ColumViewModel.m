@@ -29,7 +29,12 @@
 
 - (void)getDataWithRequestMode:(RequestMode)requestMode completionHanle:(void (^)(NSError *))completionHandle{
         [TVNetManager getColumDataCompletionHandler:^(NSArray *model, NSError *error) {
-            [self.columList addObjectsFromArray:model];
+            if (!error) {
+                if (requestMode == RequestModeRefresh) {
+                    [self.columList removeAllObjects];
+                }
+                [self.columList addObjectsFromArray:model];
+            }
             completionHandle(error);
         }];
 }

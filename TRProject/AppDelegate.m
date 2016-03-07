@@ -10,6 +10,9 @@
 #import "AppDelegate+System.h"
 #import "TVNetManager.h"
 #import "ViewController.h"
+#import "LiveListNetManager.h"
+#import "LiveListViewController.h"
+#import "PlayViewController.h"
 
 @interface AppDelegate ()
 @end
@@ -21,8 +24,12 @@
     [self setupGlobalConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [ViewController new];
+    self.window.rootViewController = [PlayViewController new];
     [self.window makeKeyAndVisible];
+//    
+//    [LiveListNetManager getLiveListCompletionHandler:^(id model, NSError *error) {
+//        NSLog(@"adfasdf");
+//    }];
 
     return YES;
 }

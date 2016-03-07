@@ -32,4 +32,12 @@
 + (NSDictionary *)replaceKeyFromPropertyName{
     return nil;
 }
+
++ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName{
+    return [self replacedKeyFromPropertyName:propertyName];
+}
+
++ (NSString *)replacedKeyFromPropertyName:(NSString *)propertyName{
+    return propertyName;
+}
 @end
