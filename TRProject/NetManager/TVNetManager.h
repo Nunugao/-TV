@@ -14,6 +14,4 @@
 
 + (id) getColumDataCompletionHandler:(void (^)(id model,NSError *error)) completionHandler;
 
-+ (id) getPlayDataCompletionHandler:(void (^)(id model,NSError *error)) completionHandler;
-
 @end

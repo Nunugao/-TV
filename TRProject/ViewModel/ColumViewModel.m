@@ -27,6 +27,10 @@
     return [NSURL URLWithString:[self modelForRow:row].image];
 }
 
+-(NSString *)columSlugForRow:(NSInteger)row{
+    return [self modelForRow:row].slug;
+}
+
 - (void)getDataWithRequestMode:(RequestMode)requestMode completionHanle:(void (^)(NSError *))completionHandle{
         [TVNetManager getColumDataCompletionHandler:^(NSArray *model, NSError *error) {
             if (!error) {

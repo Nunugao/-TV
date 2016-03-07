@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayViewController : UIViewController
+@property (nonatomic) UINavigationController *navi;
 
++ (PlayViewController *) sharePlayViewController;
 @end

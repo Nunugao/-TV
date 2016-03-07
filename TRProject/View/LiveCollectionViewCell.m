@@ -30,7 +30,6 @@
     if(_title == nil) {
         _title = [[UILabel alloc] init];
         _title.font = [UIFont systemFontOfSize:17];
-        _title.backgroundColor = [UIColor yellowColor];
         [self addSubview:_title];
         [_title mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.right.equalTo(0);
@@ -43,12 +42,15 @@
 - (UIImageView *)nickImageView {
     if(_nickImageView == nil) {
         _nickImageView = [[UIImageView alloc] init];
+        [_nickImageView setImage:[UIImage imageNamed:@"主播名@3x.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.3996.000.00."]];
+        _nickImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.backView addSubview:_nickImageView];
         [_nickImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(0);
+            make.top.equalTo(2);
+            make.bottom.equalTo(-2);
+            make.left.equalTo(2);
             make.width.equalTo(self.nickImageView.mas_height);
         }];
-        _nickImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _nickImageView;
 }
@@ -58,10 +60,11 @@
         _nickLable = [[UILabel alloc] init];
         _nickLable.font = [UIFont systemFontOfSize:13];
         _nickLable.textColor = [UIColor whiteColor];
+        [_nickLable sizeToFit];
         [self.backView addSubview:_nickLable];
         [_nickLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.equalTo(0);
-            make.left.equalTo(self.nickImageView.mas_right);
+            make.left.equalTo(self.nickImageView.mas_right).equalTo(3);
         }];
     }
     return _nickLable;
@@ -70,11 +73,13 @@
 - (UIImageView *)viewImageView {
     if(_viewImageView == nil) {
         _viewImageView = [[UIImageView alloc] init];
+        [_viewImageView setImage:[UIImage imageNamed:@"主播名@3x.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.3996.000.00."]];
         _viewImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.backView addSubview:_viewImageView];
         [_viewImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.viewLabel.mas_left);
-            make.top.bottom.equalTo(0);
+            make.top.equalTo(2);
+            make.bottom.equalTo(-2);
+            make.right.equalTo(self.viewLabel.mas_left).equalTo(-2);
             make.width.equalTo(self.viewImageView.mas_height);
         }];
     }
@@ -98,12 +103,12 @@
 - (UIView *)backView {
     if(_backView == nil) {
         _backView = [[UIView alloc] init];
-        _backView.backgroundColor = [UIColor ];
+        _backView.backgroundColor = kRGBA(38, 32, 34, 0.5);
         [self addSubview:_backView];
         [_backView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.title.mas_top);
             make.left.right.equalTo(0);
-            make.height.equalTo(30);
+            make.height.equalTo(20);
         }];
     }
     return _backView;

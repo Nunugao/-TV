@@ -13,6 +13,7 @@
 #import "LiveListNetManager.h"
 #import "LiveListViewController.h"
 #import "PlayViewController.h"
+#import "DetailGameListNetManager.h"
 
 @interface AppDelegate ()
 @end
@@ -21,10 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
+    
+    [DetailGameListNetManager getDetailGameListWithSlug:@"lol" completionHandler:^(id model, NSError *error) {
+        NSLog(@"adfasdfasdfadfs");
+    }];
     [self setupGlobalConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [PlayViewController new];
+    self.window.rootViewController = [ViewController shareViewController].navi;
     [self.window makeKeyAndVisible];
 //    
 //    [LiveListNetManager getLiveListCompletionHandler:^(id model, NSError *error) {

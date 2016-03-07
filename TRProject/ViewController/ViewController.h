@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) UINavigationController *navi;
++ (ViewController *) shareViewController;
+
+
 
 @end
 

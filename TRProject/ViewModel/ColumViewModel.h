@@ -26,5 +26,5 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 
 - (NSURL *) columImageURLForRow:(NSInteger) row;
 - (NSString *) columNameForRow:(NSInteger) row;
-
+- (NSString *)columSlugForRow:(NSInteger) row;
 @end

@@ -40,6 +40,19 @@
 //    return CGSizeMake(width, height);
 //}
 
++ (PlayViewController *)sharePlayViewController{
+    static PlayViewController *vc = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        vc = [self new];
+        vc.navi = [[UINavigationController alloc]initWithRootViewController:vc];
+        vc.navigationController.navigationBar.translucent = NO;
+        vc.title = @"直播";
+        vc.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    });
+    return vc;
+}
+
 #pragma mark - UICollectionViewDelegate Delegate
 
 #pragma mark - UICollectionViewDataSource Delegate

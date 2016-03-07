@@ -21,11 +21,25 @@
 
 @implementation ViewController
 
++(ViewController *)shareViewController{
+   
+    static ViewController *vc = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        vc = [self new];
+        vc.navi = [[UINavigationController alloc]initWithRootViewController:vc];
+        vc.navigationController.navigationBar.translucent = NO;
+        vc.title = @"栏目";
+        vc.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    });
+    return  vc;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
- 
+    NSString *slug = [self.viewModel columSlugForRow:indexPath.row];
 
 }
 

@@ -41,7 +41,12 @@
 }
 
 -(NSString *)viewForRow:(NSInteger)row{
-    return [self modelForRow:row].view;
+    NSInteger number = [self modelForRow:row].view.integerValue;
+    if (number  > 10000) {
+        return [NSString stringWithFormat:@"%.1f万",number/10000.0];
+    }else{
+        return [NSString stringWithFormat:@"%ld",(long)number];
+    }
 }
 
 - (NSString *)uidForRow:(NSInteger)row{

@@ -16,10 +16,4 @@
     }];
 }
 
-+(id)getPlayDataCompletionHandler:(void (^)(id, NSError *))completionHandler{
-    return [NSObject GET:kPlayPath parameters:nil progress:nil completionHandler:^(id responseObj, NSError *error) {
-        completionHandler([PlayModel parse:responseObj],error);
-    }];
-}
-
 @end
