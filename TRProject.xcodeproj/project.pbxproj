@@ -23,10 +23,14 @@
 		38A1A3551C745698007EEEB7 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3541C745698007EEEB7 /* iCarousel.m */; };
 		38A641F81C8C225D00FCBF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F51C8C225D00FCBF96 /* Assets.xcassets */; };
 		38A641F91C8C225D00FCBF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F61C8C225D00FCBF96 /* LaunchScreen.storyboard */; };
-		38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F71C8C225D00FCBF96 /* Main.storyboard */; };
 		38ADA3B81C626AAF0093502F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3B71C626AAF0093502F /* main.m */; };
 		38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3BA1C626AAF0093502F /* AppDelegate.m */; };
 		7BADFFA4FF0A3162B67E0831 /* libPods-TRProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8759E2D9A62BE10618FCC99C /* libPods-TRProject.a */; };
+		8527EE261C8D127E00D21E8D /* PlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE251C8D127E00D21E8D /* PlayModel.m */; };
+		8527EE291C8D15B200D21E8D /* TVNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE281C8D15B200D21E8D /* TVNetManager.m */; };
+		8527EE2D1C8D244B00D21E8D /* ColumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE2C1C8D244B00D21E8D /* ColumModel.m */; };
+		8527EE301C8D254500D21E8D /* ColumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE2F1C8D254500D21E8D /* ColumViewModel.m */; };
+		8527EE331C8D2BE500D21E8D /* ColumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +64,6 @@
 		38A1A3541C745698007EEEB7 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		38A641F51C8C225D00FCBF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A641F61C8C225D00FCBF96 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		38A641F71C8C225D00FCBF96 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		38ADA3B31C626AAF0093502F /* TRProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38ADA3B71C626AAF0093502F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38ADA3B91C626AAF0093502F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,17 @@
 		38ADA3C71C626AAF0093502F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70276005029EE88E7F2474B9 /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
 		7BA1DBF911CCDD099DBC3032 /* Pods-TRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.debug.xcconfig"; sourceTree = "<group>"; };
+		8527EE241C8D127E00D21E8D /* PlayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayModel.h; sourceTree = "<group>"; };
+		8527EE251C8D127E00D21E8D /* PlayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayModel.m; sourceTree = "<group>"; };
+		8527EE271C8D15B200D21E8D /* TVNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVNetManager.h; sourceTree = "<group>"; };
+		8527EE281C8D15B200D21E8D /* TVNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVNetManager.m; sourceTree = "<group>"; };
+		8527EE2A1C8D172600D21E8D /* TVPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVPath.h; sourceTree = "<group>"; };
+		8527EE2B1C8D244B00D21E8D /* ColumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumModel.h; sourceTree = "<group>"; };
+		8527EE2C1C8D244B00D21E8D /* ColumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumModel.m; sourceTree = "<group>"; };
+		8527EE2E1C8D254500D21E8D /* ColumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumViewModel.h; sourceTree = "<group>"; };
+		8527EE2F1C8D254500D21E8D /* ColumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumViewModel.m; sourceTree = "<group>"; };
+		8527EE311C8D2BE500D21E8D /* ColumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumCollectionViewCell.h; sourceTree = "<group>"; };
+		8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumCollectionViewCell.m; sourceTree = "<group>"; };
 		8759E2D9A62BE10618FCC99C /* libPods-TRProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				38A1A33F1C7452F2007EEEB7 /* Constant.h */,
+				8527EE2A1C8D172600D21E8D /* TVPath.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -116,6 +131,10 @@
 			children = (
 				38A0898C1C869C3000CA6019 /* BaseModel.h */,
 				38A0898D1C869C3000CA6019 /* BaseModel.m */,
+				8527EE241C8D127E00D21E8D /* PlayModel.h */,
+				8527EE251C8D127E00D21E8D /* PlayModel.m */,
+				8527EE2B1C8D244B00D21E8D /* ColumModel.h */,
+				8527EE2C1C8D244B00D21E8D /* ColumModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +142,8 @@
 		38A1A32E1C74526C007EEEB7 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				8527EE271C8D15B200D21E8D /* TVNetManager.h */,
+				8527EE281C8D15B200D21E8D /* TVNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -132,7 +153,6 @@
 			children = (
 				38A641F51C8C225D00FCBF96 /* Assets.xcassets */,
 				38A641F61C8C225D00FCBF96 /* LaunchScreen.storyboard */,
-				38A641F71C8C225D00FCBF96 /* Main.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -158,6 +178,8 @@
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8527EE311C8D2BE500D21E8D /* ColumCollectionViewCell.h */,
+				8527EE321C8D2BE500D21E8D /* ColumCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +196,8 @@
 		38A1A3361C74526C007EEEB7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8527EE2E1C8D254500D21E8D /* ColumViewModel.h */,
+				8527EE2F1C8D254500D21E8D /* ColumViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,7 +351,6 @@
 				38A641F91C8C225D00FCBF96 /* LaunchScreen.storyboard in Resources */,
 				38A641F81C8C225D00FCBF96 /* Assets.xcassets in Resources */,
 				38A1A34F1C74560D007EEEB7 /* .gitignore in Resources */,
-				38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A1A3471C745317007EEEB7 /* NSObject+MJExtension.m in Sources */,
+				8527EE301C8D254500D21E8D /* ColumViewModel.m in Sources */,
 				38A1A3551C745698007EEEB7 /* iCarousel.m in Sources */,
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				38A1A3511C74560D007EEEB7 /* PSCollectionViewCell.m in Sources */,
+				8527EE291C8D15B200D21E8D /* TVNetManager.m in Sources */,
 				38A1A33B1C7452CF007EEEB7 /* Factory.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
@@ -383,7 +408,10 @@
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				38A0898E1C869C3000CA6019 /* BaseModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
+				8527EE331C8D2BE500D21E8D /* ColumCollectionViewCell.m in Sources */,
+				8527EE261C8D127E00D21E8D /* PlayModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				8527EE2D1C8D244B00D21E8D /* ColumModel.m in Sources */,
 				38A1A3501C74560D007EEEB7 /* PSCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

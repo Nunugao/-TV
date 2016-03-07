@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+System.h"
+#import "TVNetManager.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 @end
@@ -17,6 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     [self setupGlobalConfig];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [ViewController new];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

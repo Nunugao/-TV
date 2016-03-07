@@ -7,21 +7,88 @@
 //
 
 #import "ViewController.h"
+#import "ColumCollectionViewCell.h"
+#import "ColumViewModel.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic) ColumViewModel *viewModel;
+
+@property (nonatomic) UICollectionView *collectionView;
+@property (nonatomic) UICollectionViewFlowLayout *flowLayout;
 
 @end
 
 @implementation ViewController
+#pragma mark - UICollectionViewDataSource Delegate
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [self.viewModel rowCount];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    ColumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"columCell" forIndexPath:indexPath];
+    [cell.imageView setImageWithURL:[self.viewModel columImageURLForRow:indexPath.row]];
+    cell.label.text = [self.viewModel columNameForRow:indexPath.row];
+    return cell;
+}
+
+
+#pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.collectionView beginHeaderRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 懒加载
+- (UICollectionView *)collectionView {
+	if(_collectionView == nil) {
+		_collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.flowLayout];
+        [_collectionView registerClass:[ColumCollectionViewCell class] forCellWithReuseIdentifier:@"columCell"];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        [self.view addSubview:_collectionView];
+        [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(0);
+        }];
+//        WK(weakSelf);
+        WK(weakSelf);
+        [_collectionView addHeaderRefresh:^{
+            [weakSelf.viewModel getDataWithRequestMode:RequestModeRefresh completionHanle:^(NSError *error) {
+                if (!error) {
+                    [weakSelf.collectionView reloadData];
+                }
+                [weakSelf.collectionView endHeaderRefresh];
+            }];
+        }];
+	}
+	return _collectionView;
+}
+
+- (UICollectionViewFlowLayout *)flowLayout {
+	if(_flowLayout == nil) {
+		_flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        _flowLayout.minimumLineSpacing = 10;
+        _flowLayout.minimumInteritemSpacing = 10;
+        _flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        CGFloat width = (kScreenW - 10*2  - 12*2) / 3;
+        CGFloat height = width * 380 / 230;
+        _flowLayout.itemSize = CGSizeMake(width, height);
+	}
+	return _flowLayout;
+}
+
+- (ColumViewModel *)viewModel {
+	if(_viewModel == nil) {
+		_viewModel = [[ColumViewModel alloc] init];
+	}
+	return _viewModel;
 }
 
 @end
