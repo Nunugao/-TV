@@ -36,6 +36,10 @@
 		8527EE3F1C8D52F300D21E8D /* LiveListNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE3E1C8D52F300D21E8D /* LiveListNetManager.m */; };
 		8527EE421C8D53F000D21E8D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE411C8D53F000D21E8D /* PlayViewController.m */; };
 		8527EE451C8D545600D21E8D /* LiveListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8527EE441C8D545600D21E8D /* LiveListViewModel.m */; };
+		8544ACE51C8E7A6B00057EE6 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8544ACE41C8E7A6B00057EE6 /* IndexViewController.m */; };
+		8544ACE81C8E7B8D00057EE6 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8544ACE71C8E7B8D00057EE6 /* MyViewController.m */; };
+		8544ACEB1C8EC0EE00057EE6 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8544ACEA1C8EC0EE00057EE6 /* VideoViewController.m */; };
+		8544ACEE1C8EC2C600057EE6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8544ACED1C8EC2C600057EE6 /* SearchViewController.m */; };
 		85C992EF1C8D773F00EB8D99 /* DetailGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C992EE1C8D773F00EB8D99 /* DetailGameListViewController.m */; };
 		85C992F21C8D776000EB8D99 /* DetailGameListNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C992F11C8D776000EB8D99 /* DetailGameListNetManager.m */; };
 		85C992F51C8D794400EB8D99 /* DetailGameListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C992F41C8D794400EB8D99 /* DetailGameListModel.m */; };
@@ -100,6 +104,14 @@
 		8527EE411C8D53F000D21E8D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		8527EE431C8D545600D21E8D /* LiveListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListViewModel.h; sourceTree = "<group>"; };
 		8527EE441C8D545600D21E8D /* LiveListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewModel.m; sourceTree = "<group>"; };
+		8544ACE31C8E7A6B00057EE6 /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		8544ACE41C8E7A6B00057EE6 /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		8544ACE61C8E7B8D00057EE6 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		8544ACE71C8E7B8D00057EE6 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		8544ACE91C8EC0EE00057EE6 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		8544ACEA1C8EC0EE00057EE6 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		8544ACEC1C8EC2C600057EE6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		8544ACED1C8EC2C600057EE6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		85C992ED1C8D773F00EB8D99 /* DetailGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailGameListViewController.h; sourceTree = "<group>"; };
 		85C992EE1C8D773F00EB8D99 /* DetailGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailGameListViewController.m; sourceTree = "<group>"; };
 		85C992F01C8D776000EB8D99 /* DetailGameListNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailGameListNetManager.h; sourceTree = "<group>"; };
@@ -227,6 +239,14 @@
 				8527EE411C8D53F000D21E8D /* PlayViewController.m */,
 				85C992ED1C8D773F00EB8D99 /* DetailGameListViewController.h */,
 				85C992EE1C8D773F00EB8D99 /* DetailGameListViewController.m */,
+				8544ACE31C8E7A6B00057EE6 /* IndexViewController.h */,
+				8544ACE41C8E7A6B00057EE6 /* IndexViewController.m */,
+				8544ACE61C8E7B8D00057EE6 /* MyViewController.h */,
+				8544ACE71C8E7B8D00057EE6 /* MyViewController.m */,
+				8544ACE91C8EC0EE00057EE6 /* VideoViewController.h */,
+				8544ACEA1C8EC0EE00057EE6 /* VideoViewController.m */,
+				8544ACEC1C8EC2C600057EE6 /* SearchViewController.h */,
+				8544ACED1C8EC2C600057EE6 /* SearchViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -442,8 +462,11 @@
 				85C992F51C8D794400EB8D99 /* DetailGameListModel.m in Sources */,
 				38A1A3511C74560D007EEEB7 /* PSCollectionViewCell.m in Sources */,
 				8527EE291C8D15B200D21E8D /* TVNetManager.m in Sources */,
+				8544ACE51C8E7A6B00057EE6 /* IndexViewController.m in Sources */,
 				38A1A33B1C7452CF007EEEB7 /* Factory.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
+				8544ACEE1C8EC2C600057EE6 /* SearchViewController.m in Sources */,
+				8544ACE81C8E7B8D00057EE6 /* MyViewController.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				8527EE3F1C8D52F300D21E8D /* LiveListNetManager.m in Sources */,
 				382C11861C7E930F00F34BB0 /* NSObject+ViewModel.m in Sources */,
@@ -452,6 +475,7 @@
 				8527EE3C1C8D4D1A00D21E8D /* LiveListModel.m in Sources */,
 				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
+				8544ACEB1C8EC0EE00057EE6 /* VideoViewController.m in Sources */,
 				38A0898E1C869C3000CA6019 /* BaseModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
 				8527EE331C8D2BE500D21E8D /* ColumCollectionViewCell.m in Sources */,

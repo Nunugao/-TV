@@ -49,6 +49,20 @@
     [super viewDidLoad];
     self.title = _columModel.name;
     [self.collectionView beginHeaderRefresh];
+    self.listViewModel.columModel = self.columModel;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(0, 0, 50, 25);
+    
+    [button setImage:[[UIImage imageNamed:@"UIBarButtonItemArrowLeft@3x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ] forState:UIControlStateNormal];
+    [button bk_addEventHandler:^(id sender) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor redColor];
+    button.layer.cornerRadius = 4; //设置圆角
+    UIBarButtonItem *barItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+    UIBarButtonItem *speaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    speaceItem.width = -15;
+    self.navigationItem.leftBarButtonItems = @[barItem,speaceItem];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +77,7 @@
         _flowLayout.minimumInteritemSpacing = 10;
         _flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
         // 350 260
-        CGFloat width = (kScreenW - 3*10) / 3;
+        CGFloat width = (kScreenW - 12*3) /2;
         CGFloat height = width * 260 / 350;
         _flowLayout.itemSize = CGSizeMake(width, height);
 	}
@@ -92,22 +106,28 @@
             [weakSelf.listViewModel getDataWithRequestMode:RequestModeRefresh completionHanle:^(NSError *error) {
                 if (!error) {
                     [weakSelf.collectionView reloadData];
-                }else{
-                    NSLog(@"error:%@",error);
                 }
                 [weakSelf.collectionView endHeaderRefresh];
             }];
         }];
-        
         [_collectionView addAutoFooterRefresh:^{
             [weakSelf.listViewModel getDataWithRequestMode:RequestModeMore completionHanle:^(NSError *error) {
                 if (!error) {
                     [weakSelf.collectionView reloadData];
+                }else{
+                    
                 }
+                NSLog(@"error********:%@",error);
                 [weakSelf.collectionView endFooterRefresh];
             }];
-        }];
-	}
+        }];	}
 	return _collectionView;
 }
+- (LiveListViewModel *)listViewModel {
+	if(_listViewModel == nil) {
+		_listViewModel = [[LiveListViewModel alloc] init];
+	}
+	return _listViewModel;
+}
+
 @end

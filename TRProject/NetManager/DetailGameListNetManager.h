@@ -12,6 +12,6 @@
 
 @interface DetailGameListNetManager : NSObject
 
-+ (id) getDetailGameListWithSlug:(NSString *) slug completionHandler:(void (^)(id model,NSError *error)) completionHandler;
++ (id) getDetailGameListWithSlug:(NSString *) slug withPage:(NSInteger)page completionHandler:(void (^)(id model,NSError *error)) completionHandler;
 
 @end

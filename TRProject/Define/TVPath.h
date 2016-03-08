@@ -11,9 +11,11 @@
 
 #define kColumPath @"http://www.quanmin.tv/json/categories/list.json"
 
-#define kPlayPath @"http://www.quanmin.tv/json/play/list.json"
+#define kPlayPath @"http://www.quanmin.tv/json/play/list%@.json"
 
-#define kGameList @"http://www.quanmin.tv/json/categories/%@/list.json"
+#define kGameList @"http://www.quanmin.tv/json/categories/%@/list%@.json"
+
+
 
 
 #endif /* TVPath_h */

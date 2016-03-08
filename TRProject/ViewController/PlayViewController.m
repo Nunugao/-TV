@@ -49,6 +49,8 @@
         vc.navigationController.navigationBar.translucent = NO;
         vc.title = @"直播";
         vc.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+        vc.tabBarItem.image = [[UIImage imageNamed:@"发现-默认@2x.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.53246.000.00."] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"发现-焦点@2x.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.18619.000.00."] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     });
     return vc;
 }
@@ -101,8 +103,24 @@
             [weakSelf.listViewModel getDataWithRequestMode:RequestModeRefresh completionHanle:^(NSError *error) {
                 if (!error) {
                     [weakSelf.collectionView reloadData];
+                }else{
+//                    MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:weakSelf.view animated:YES];
+//                    hub.mode = MBProgressHUDModeText;
+//                    hub.labelText = @"已经没有数据了";
+//                    [hub hide:YES afterDelay:1.0];
                 }
                 [weakSelf.collectionView endHeaderRefresh];
+            }];
+        }];
+        [_collectionView addAutoFooterRefresh:^{
+            [weakSelf.listViewModel getDataWithRequestMode:RequestModeMore completionHanle:^(NSError *error) {
+                if (!error) {
+                    [weakSelf.collectionView reloadData];
+                }else{
+                    
+                }
+                NSLog(@"error********:%@",error);
+                [weakSelf.collectionView endFooterRefresh];
             }];
         }];
     }

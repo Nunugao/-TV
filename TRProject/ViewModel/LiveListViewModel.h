@@ -10,6 +10,12 @@
 #import "LiveListModel.h"
 #import "NSObject+ViewModel.h"
 #import "LiveListNetManager.h"
+#import "ColumModel.h"
+
+typedef NS_ENUM(NSUInteger, PageType) {
+    PageTypePlay,
+    PageTypeDetailGame,
+};
 
 @interface LiveListViewModel : NSObject
 
@@ -25,5 +31,15 @@
 - (NSString *) nickForRow:(NSInteger) row;
 - (NSString *) viewForRow:(NSInteger) row;
 - (NSString *) uidForRow:(NSInteger) row;
+
+@property (nonatomic) NSInteger page;
+
+@property (nonatomic) PageType pageType;
+
+@property (nonatomic) ColumModel *columModel;
+
+
+
+
 
 @end

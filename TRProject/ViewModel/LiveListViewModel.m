@@ -7,6 +7,7 @@
 //
 
 #import "LiveListViewModel.h"
+#import "DetailGameListNetManager.h"
 
 @interface LiveListModel()
 
@@ -48,26 +49,41 @@
     return [self modelForRow:row].uid;
 }
 
-- (void)getDataWithRequestMode:(RequestMode)requestMode completionHanle:(void (^)(NSError *error))completionHandle{
-//    switch (requestMode) {
-//        case RequestModeRefresh: {
-//            
-//            break;
-//        }
-//        case RequestModeMore: {
-//            
-//            break;
-//        }
-//    }
-    [LiveListNetManager getLiveListCompletionHandler:^(LiveListModel *model, NSError *error) {
-        if (!error) {
-            if (requestMode == RequestModeRefresh) {
-                [self.liveList removeAllObjects];
-            }
-            [self.liveList addObjectsFromArray:model.data];
+- (void)getDataWithRequestMode:(RequestMode)requestMode completionHanle:(void (^)(NSError *error)) completionHandle{
+    NSInteger tempPage = 0;
+    switch (requestMode) {
+        case RequestModeRefresh: {
+            tempPage  = 0;
+            break;
         }
-        completionHandle(error);
-    }];
+        case RequestModeMore: {
+            tempPage = _page + 1;
+            break;
+        }
+    }
+    if (self.pageType == PageTypePlay) {
+        [LiveListNetManager getLiveListWithPage:tempPage CompletionHandler:^(LiveListModel *model, NSError *error) {
+            if (!error) {
+                if (requestMode == RequestModeRefresh) {
+                    [self.liveList removeAllObjects];
+                }
+                [self.liveList addObjectsFromArray:model.data];
+                _page = tempPage;
+            }
+            completionHandle(error);
+        }];
+    }else if(self.pageType == PageTypeDetailGame){
+        [DetailGameListNetManager getDetailGameListWithSlug:_columModel.slug withPage:tempPage completionHandler:^(LiveListModel * model, NSError *error) {
+            if (!error) {
+                if (requestMode == RequestModeRefresh) {
+                    [self.liveList removeAllObjects];
+                }
+                [self.liveList addObjectsFromArray:model.data];
+                _page = tempPage;
+            }
+        }];
+    }
+    
 }
 
 #pragma mark - 懒加载

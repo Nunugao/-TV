@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface LiveListNetManager : NSObject
-+ (id) getLiveListCompletionHandler:(void (^)(id model,NSError *error)) completionHandler;
++ (id)getLiveListWithPage:(NSInteger)page CompletionHandler:(void (^)(id, NSError *))completionHandler;
 @end

@@ -32,6 +32,9 @@
         vc.navigationController.navigationBar.translucent = NO;
         vc.title = @"栏目";
         vc.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+        vc.tabBarItem.image = [[UIImage imageNamed:@"栏目-默认.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.45456.000.00.@1x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"栏目-焦点@3x.png.base.universal.regular.off.horizontal.normal.active.onepartscale.onepart.10829.000.00."] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
     });
     return  vc;
 }
